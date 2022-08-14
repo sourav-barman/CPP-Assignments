@@ -12,11 +12,25 @@ int main() {
     for(i=0; i<row; i++) {
         for(j=0; j<col; j++) {
             scanf("%d", &mat[i][j]);
-            sum+=mat[i][j];
         }
     }
-   
-    printf("\nThe sum of rows and columns of the given matrix is: %d", sum);
+
+    for(i=0; i<row; i++) {
+        sum = 0;
+        for(j=0; j<col; j++) {
+            sum += mat[i][j];
+        }
+        printf("\nSum of elements in Row%d : %d", i+1, sum);
+    }
+
+    printf("\n\n");
+    for(i=0; i<row; i++) {
+        sum = 0;
+        for(j=0; j<col; j++) {
+            sum += mat[j][i];
+        }
+        printf("\nSum of elements in Column%d : %d", i+1, sum);
+    }
     
     return 0;
 }
