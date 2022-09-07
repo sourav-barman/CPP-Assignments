@@ -17,10 +17,13 @@ class Greatest {
 };
 
 int main() {
-    Greatest g1;
+    Greatest g;
+    int x, y, z;
+
+    cout << "Enter three numbers: ";
+    cin >> x >> y >> z;
     
-    cout << "\nGreatest number among 25, 48, 90 is: " << g1.findGreatestNumber(25, 48, 90);
-    cout << "\nGreatest number among 77, 85, 77 is: " << g1.findGreatestNumber(77, 85, 77);
+    cout << "\nGreatest number among " << x << ", " << y << ", " << z << " is " << g.findGreatestNumber(x, y, z);
 
     return 0;
 }
