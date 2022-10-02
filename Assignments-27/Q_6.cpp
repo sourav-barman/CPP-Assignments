@@ -30,7 +30,7 @@ class CString {
         }
 
         ~CString() {
-            delete str;
+            delete []str;
         }
 
         void display() {
@@ -53,7 +53,7 @@ class CString {
         CString& operator=(CString s) {
             if (str != s.str) {
                 if (str != NULL)
-                    delete str;
+                    delete []str;
                 len = s.len;
                 str = new char[len+1];
                 strcpy(str, s.str);
